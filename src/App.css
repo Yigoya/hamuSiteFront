@@ -1,38 +1,342 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Oleo+Script&family=Open+Sans:ital,wght@0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,600;0,700;1,400&family=Rubik:wght@400;500;700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+*{
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: 'Poppins', sans-seri
+}
+.App{
+  margin: 0 15rem;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  border-radius: 2rem;
+}
+.desc{
+  display:block;
+  padding: 0.3rem 2rem;
+
+  width: 100%;
+  margin-top: 1rem;
+  border-left: 5px solid rgb(13, 189, 189);
+  background-color: rgba(13, 189, 189,0.2);
+
+}
+.cont {
+  width: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.cont2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border:  1px solid red;
+  border-radius: 20px;
+  background-color: white;
+}
+.inputs {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  margin: 1rem 0;
+  width: 100%;
+}
+.inputsadd {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  margin: 0.3rem;
+  width: 100%;
+}
+.inputs span {
+  padding: 5px 6px;
+  border-radius: 10px;
+  background-color: red;
+  align-items: center;
+}
+.inputs input, .inputs textarea, .inputs select {
+  border: none;
+  outline: none;
+  background-color: rgba(255, 0, 0,0.3);
+  padding: 10px 28px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: -18px;
+}
+button {
+  padding: 10px;
+  width: 100%;
+  background-color: red;
   color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px rgba(30, 30, 30,0.3);
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+.change {
+  padding: 8px;
+  width: 100%;
+  color: red;
+  border-radius: 10px;
+  box-shadow: 0 0 2px 2px rgba(255, 0, 0, 0.3);
+  border: 2px solid red;
+  text-align: center;
+  cursor: pointer;
+}
+button:hover , .change:hover {
+  width: 95%;
+  opacity: 0.7;
+}
+.ifyou {
+  width: 100%;
+  text-align: left;
+  color: rgb(215, 40, 40);
+  padding: 10px;
+}
+h1 , h3 {
+  color: rgb(161, 0, 0);
+  padding: 0 0 1rem 0;
+}
+.inputs input::file-selector-button {
+  font-weight: bold;
+  color: rgb(255, 0, 0);
+  padding: 0.5em;
+  border: thin solid rgb(255, 0, 0);
+  border-radius: 3px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+/* .inputs input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 7px 7px rgb(127, 127, 127);
+  border-radius: 0 0 20px 20px;
+}
+.navleft {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+.button {
+  width: 200px;
+  gap: 10px;
+  margin-right: 2rem;
+}
+.search{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-radius: 50px;
+  background-color: rgba(13, 189, 189,0.3);
+  border: 2px solid rgb(13, 189, 189);
+}
+.search input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding: 0.3rem 0;
+  background-color: transparent;
+}
+.search span {
+  padding: 7px 15px;
+}
+h2 {
+  padding: 2rem 3rem;
+}
+.homecont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(300px, auto);
+
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.post {
+  margin: 1rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(141, 141, 141);
+  position: relative;
+  animation: postanimation 1s;
+}
+@keyframes postanimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
   }
-  to {
-    transform: rotate(360deg);
+  90%{
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.post span{
+  background-color: rgb(13, 189, 189);
+  border-radius: 4px;
+  padding: 2px 13px;
+  box-shadow: 4px 4px 4px rgb(176, 176, 176);
+}
+.post .title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0 0 0 10px;
+}
+.post p{
+  font-size: 14px;
+}
+.post p:first-child {
+  font-size: 18px;
+  font-weight: 600;
+}
+.post .click {
+  color: rgb(13, 189, 189);
+  padding-left: 10px;
+  margin-left: 10px;
+  border-left: 1px solid rgb(13, 189, 189);
+}
+.post img {
+  width: 350px;
+  height: 250px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.purch {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.shop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0,0.2);
+}
+.shop form {
+background-color: white;}
+.star {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 2px solid rgb(255, 213, 0);
+
+}
+.starpage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+
+
+}
+
+.comments {
+  width: 100%;
+  height: 60vh;
+  overflow: scroll;
+}
+.comment div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.com{
+  padding: 1rem;
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 5px;
+
+}
+.preload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.preload div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.preload .p {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  animation: pana 2s;
+  animation-fill-mode: both;
+}
+.preload .span {
+  border-radius: 50%;
+  background-color: aqua;
+  animation: spana 2s;
+  animation-fill-mode: both;
+  padding: 6px;
+}
+@keyframes spana {
+  0%{
+    transform: translate(200px);
+  }
+  100%{
+    transform: translate(-130px);
+  }
+}
+@keyframes pana {
+  0%{
+    transform: translate(-50px);
+  }
+  100%{
+    transform: translate(70px);
   }
 }
