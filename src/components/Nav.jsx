@@ -23,6 +23,7 @@ function Nav() {
         <div className='inputs button'>
             <button>{user ? <Link to={`/cart/${user[0].id}`}>Carts</Link>:<Link to={`/auth`}>sign in</Link>}</button>
             <p onClick={()=> Logout()} className='change'>{user ? 'Logout':'sign up'}</p>
+            {user && <p onClick={()=> navigate('/post')} className='change'>Post</p>}
         </div>
     </nav>
   )
