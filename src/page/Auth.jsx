@@ -5,6 +5,7 @@ function Login() {
   return (
     <div className='cont'>
         <Form />
+        <p>hi there</p>
     </div>
   )
 }
